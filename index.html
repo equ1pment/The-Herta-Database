@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Herta Database</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>THE HERTA'S DATABASE</h1>
+    </header>
+
+    <img src="The-Herta/Herta-Kurukuru.gif" alt="KuruKuru" class="kurukuru">
+
+    <div class="wrapper">
+        <section class="section-title">
+            <h2>- HERTA -</h2>
+        </section>
+
+        <main class="card-container">
+            <article class="card"><a href="Herta1.html" class="card-link">
+            <img src="The-Herta/Eidolon2.png" alt="">
+            <h2>About Herta #1</h2>
+            <p>Everything you need to know about her #1.</p>
+            </a></article>
+
+            <article class="card"><a href="Herta2.html" class="card-link">
+            <img src="The-Herta/Eidolon1.png" alt="">
+            <h2>About Herta #2</h2>
+            <p>Everything you need to know about her #2.</p>
+            </a></article>
+
+            <article class="card"><a href="Herta3.html" class="card-link">
+            <img src="The-Herta/Eidolon3.png" alt="">
+            <h2>About Herta #3</h2>
+            <p>Everything you need to know about her #3.</p>
+            </a></article>
+
+            <article class="card"><a href="WIP.html" class="card-link">
+            <img src="The-Herta/Eidolon4.png" alt="">
+            <h2>About Herta #4</h2>
+            <p>Everything you need to know about her #4.</p>
+            </a></article>
+
+            <article class="card"><a href="WIP.html" class="card-link">
+            <img src="The-Herta/Eidolon5.png" alt="">
+            <h2>About Herta #5</h2>
+            <p>Everything you need to know about her #5</p>
+            </a></article>
+
+            <article class="card"><a href="WIP.html" class="card-link">
+            <img src="The-Herta/Eidolon6.png" alt="">
+            <h2>Confess to Herta</h2>
+            <p>Confess your thoughts to her.</p>
+            </a></article>
+        </main>
+        </div>
+
+        <section class="section-title">
+            <h2>- DATA -</h2>
+        </section>
+
+        <div class="wrapper">
+        <main class="card-container">
+            <article class="card"><a href="WIP.html" class="card-link">
+            <img src="The-Herta/Aeons.png" alt="">
+            <h2>Aeons</h2>
+            <p>Everything we have learned about Aeons so far.</p>
+            </a></article>
+
+            <article class="card"><a href="WIP.html" class="card-link">
+            <img src="The-Herta/Aeon_Nous.png" alt="">
+            <h2>Nous</h2>
+            <p>Everything we have learned about Nous - An Aeon representing the Path of Erudition so far.</p>
+            </a></article>
+
+            <article class="card"><a href="WIP.html" class="card-link">
+            <img src="The-Herta/Simulated-Universe.png" alt="">
+            <h2>Simulated Universe</h2>
+            <p>A project jointly made by four members of the Genius Society: Herta, Ruan Mei, Screwllum and Stephen Lloyd</p>
+            </a></article>
+
+            <article class="card"><a href="WIP.html" class="card-link">
+            <img src="The-Herta/Curio.png" alt="">
+            <h2>Curios & Relics</h2>
+            <p>Every Curios and Relics we have collected and learned about so far.</p>
+            </a></article>
+
+            <article class="card"><a href="WIP.html" class="card-link">
+            <img src="The-Herta/Genius_Society.png" alt="">
+            <h2>Genius Society</h2>
+            <p>Everything you need to know about the Genius Society</p>
+            </a></article>
+
+            <article class="card"><a href="WIP.html" class="card-link">
+            <img src="The-Herta/Herta-Space-Station.png" alt="">
+            <h2>Apply</h2>
+            <p>Apply to work as a Data Analyst or Data Scientist on The Herta's Database at Herta Space Station.</p>
+            </a></article>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>Please direct all of your inquiries to <a href="" class="contact-asta">Asta</a> - Lead Astronomer.</p>
+        <h3>&copy; 2??? - Designed by Screwllum, powered by Herta Space Station</h3>
+    </footer>
+
+</body>
+
+<script>
+    // Khi bấm vào hình -> cuộn lên đầu
+    const backToTopBtn = document.querySelector('.kurukuru');
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // cuộn mượt
+        });
+    });
+
+    // Tuỳ chọn: Ẩn nút khi ở đầu trang, hiện khi cuộn xuống
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 3000) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+</script>
+
+</html>

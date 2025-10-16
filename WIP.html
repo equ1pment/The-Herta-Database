@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIP</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="Herta1.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>THE HERTA'S DATABASE</h1>
+    </header>
+
+    <img src="The-Herta/Herta-Kurukuru.gif" alt="KuruKuru" class="kurukuru">
+
+    <div class="wrapper">
+        <main class="card-container">
+
+        <h2 style="font-size: 48px; word-spacing: 24px; letter-spacing: 16px;">
+        You Caught Us
+        </h2>
+        <p style="font-size: 24px; word-spacing: 16px; letter-spacing: 8px;">
+        This is working in progress...
+        </p>
+        <div class="wrapper">
+            <a href="The-Herta-Database.html" class="backtohome"><h5>Back to Home</h5></a>
+        </div>
+            
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>Please direct all of your inquiries to <a href="" class="contact-asta">Asta</a> - Lead Astronomer.</p>
+        <h3>&copy; 2??? - Designed by Screwllum, powered by Herta Space Station</h3>
+    </footer>
+
+</body>
+
+<script>
+    // Khi bấm vào hình -> cuộn lên đầu
+    const backToTopBtn = document.querySelector('.kurukuru');
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // cuộn mượt
+        });
+    });
+
+    // Tuỳ chọn: Ẩn nút khi ở đầu trang, hiện khi cuộn xuống
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 3000) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+</script>
+
+</html>

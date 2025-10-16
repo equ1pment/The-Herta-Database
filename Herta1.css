@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Light.ttf') format('.tff'),
+        url('../fonts/JetBrainsMono-Light.woff2') format('.woff2');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.kurukuru {
+    background-color: #514788;
+    position: fixed;
+    border: 4px solid 	#2a2542;
+    bottom: 8px;
+    right: 8px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    transition: all 0.175s ease-in-out;
+}
+.kurukuru:hover {
+    transform: scale(1.1);
+}
+
+.kurukuru:active {
+    transform: scale(0.9);
+}
+
+.section-title {
+    letter-spacing: 12px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.article-desc {
+    letter-spacing: 8px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.paragraph h3 {
+    letter-spacing: 6px;
+    font-size: 32px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.paragraph p {
+    font-size: 24px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 36px;
+    text-align: left;
+}
+
+.paragraph figure {
+    text-align: center;
+}
+
+.paragraph figure figcaption {
+    padding-top: 1em;
+}
+
+.imgfig {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 6px solid #514788;
+}
+
+.backtohome {
+    text-align: center;
+    font-size: 32px;
+}
+
+body {
+    font-family: 'JetBrains Mono';
+    word-spacing: 4px;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.site-header {
+    background: #7A56AE;
+    background: linear-gradient(30deg,rgba(122, 86, 174, 1) 0%, rgba(81, 71, 136, 1) 40%, rgba(132, 85, 250, 1) 70%, rgba(89, 66, 137, 1) 100%);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.site-footer {
+    background: #7A56AE;
+    background: linear-gradient(30deg,rgba(122, 86, 174, 1) 0%, rgba(81, 71, 136, 1) 40%, rgba(132, 85, 250, 1) 70%, rgba(89, 66, 137, 1) 100%);
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.site-header {
+    font-size: 24px;
+    letter-spacing: 24px;
+}
+
+/* ÄÃ¢y lÃ  Flexible Image! */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Loáº¡i bá» khoáº£ng trá»‘ng thá»«a bÃªn dÆ°á»›i áº£nh */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* === LAYOUT CHÃNH (MOBILE-FIRST) === */
+
+.wrapper {
+    width: 90%; /* Fluid Grid: Chiá»u rá»™ng theo pháº§n trÄƒm */
+    margin: 0 auto;
+    max-width: 1200px; /* Giá»›i háº¡n Ä‘á»™ rá»™ng tá»‘i Ä‘a trÃªn mÃ n hÃ¬nh lá»›n */
+}
+
+.card-container {
+    padding: 2em 0;
+}
+
+.card {
+    text-align: center;
+    background-color: white;
+    border: 4px solid #514788;
+    border-radius: 16px;
+    padding: 2em;
+    margin-bottom: 2em; /* Máº·c Ä‘á»‹nh cÃ¡c card xáº¿p chá»“ng lÃªn nhau */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    animation: colorShifting 2s ease-in-out infinite;
+}
+
+.card img {
+    animation: floatingAnimation 2s ease-in-out infinite;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === BREAKPOINT CHO MÃY TÃNH Báº¢NG === */
+/* Náº¾U mÃ n hÃ¬nh rá»™ng Tá»ª 600px TRá»ž LÃŠN, Ã¡p dá»¥ng cÃ¡c style nÃ y */
+@media (min-width: 600px) {
+    .card-container {
+        display: flex; /* Báº¯t Ä‘áº§u sá»­ dá»¥ng Flexbox Ä‘á»ƒ táº¡o lÆ°á»›i */
+        flex-wrap: wrap; /* Cho phÃ©p cÃ¡c má»¥c xuá»‘ng dÃ²ng */
+        justify-content: center; /* Táº¡o khoáº£ng trá»‘ng giá»¯a cÃ¡c card */
+        column-gap: 2em;
+    }
+
+    .card {
+        /* Fluid Grid: 2 cá»™t vá»›i má»™t khoáº£ng trá»‘ng á»Ÿ giá»¯a */
+        width: 48%;
+    }
+
+    .paragraph p {
+    font-size: 24px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    line-height: 40px;
+    text-align: left;
+    }
+
+}
+
+/* === BREAKPOINT CHO MÃY TÃNH Äá»‚ BÃ€N === */
+/* Náº¾U mÃ n hÃ¬nh rá»™ng Tá»ª 900px TRá»ž LÃŠN, Ã¡p dá»¥ng cÃ¡c style nÃ y */
+@media (min-width: 900px) {
+    .card {
+        /* Fluid Grid: 3 cá»™t */
+        width: 31%;
+    }
+}
+
+/* Others */
+.contact-asta {
+    text-decoration: none;
+    color: inherit;
+}
+
+.portrait-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    aspect-ratio: 1080 / 720;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.portrait-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    clip-path: inset(50% 0 0 0 );
+    border: 6px solid #514788;
+}
+
+.portrait-frame {
+    aspect-ratio: 750 / 1080;
+    margin: 100px 0;
+    overflow: visible;
+    border: 6px solid #514788;
+    background-position: 40%;
+    background-image: url('The-Herta/Galaxy-Background.png');
+}
+
+.character {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease-in-out;
+    z-index: 2;
+    object-position: 50% 25%;
+    transform: translateY(-70px);
+}
+
+/* Hover animations */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.275);
+}
+
+.portrait-wrapper:hover .character {
+    transform: translateY(-107px);
+}
+
+@keyframes floatingAnimation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes colorShifting {
+    0%,100% {
+        border-color: #2a2542;
+    }
+    33% {
+        border-color: #7a56ae;
+    }
+    66% {
+        border-color: #b19dcc;
+    }
+}

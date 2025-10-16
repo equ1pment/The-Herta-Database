@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Light.ttf') format('.tff'),
+        url('../fonts/JetBrainsMono-Light.woff2') format('.woff2');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.kurukuru {
+    background-color: #514788;
+    position: fixed;
+    border: 4px solid 	#2a2542;
+    bottom: 8px;
+    right: 8px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    transition: all 0.175s ease-in-out;
+}
+.kurukuru:hover {
+    transform: scale(1.1);
+}
+
+.kurukuru:active {
+    transform: scale(0.9);
+}
+
+.section-title {
+    letter-spacing: 12px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.article-desc {
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-align: center;
+}
+
+body {
+    font-family: 'JetBrains Mono';
+    word-spacing: 4px;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.site-header {
+    background: #7A56AE;
+    background: linear-gradient(30deg,rgba(122, 86, 174, 1) 0%, rgba(81, 71, 136, 1) 40%, rgba(132, 85, 250, 1) 70%, rgba(89, 66, 137, 1) 100%);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.site-footer {
+    background: #7A56AE;
+    background: linear-gradient(30deg,rgba(122, 86, 174, 1) 0%, rgba(81, 71, 136, 1) 40%, rgba(132, 85, 250, 1) 70%, rgba(89, 66, 137, 1) 100%);
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.site-header {
+    font-size: 24px;
+    letter-spacing: 24px;
+}
+
+/* Đây là Flexible Image! */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Loại bỏ khoảng trống thừa bên dưới ảnh */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* === LAYOUT CHÍNH (MOBILE-FIRST) === */
+
+.wrapper {
+    width: 90%; /* Fluid Grid: Chiều rộng theo phần trăm */
+    margin: 0 auto;
+    max-width: 1200px; /* Giới hạn độ rộng tối đa trên màn hình lớn */
+}
+
+.card-container {
+    padding: 2em 0;
+}
+
+.card {
+    text-align: center;
+    background-color: white;
+    border: 4px solid #514788;
+    border-radius: 16px;
+    padding: 2em;
+    margin-bottom: 2em; /* Mặc định các card xếp chồng lên nhau */
+    transition: transform 0.275s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === BREAKPOINT CHO MÁY TÍNH BẢNG === */
+/* NẾU màn hình rộng TỪ 600px TRỞ LÊN, áp dụng các style này */
+@media (min-width: 600px) {
+    .card-container {
+        display: flex; /* Bắt đầu sử dụng Flexbox để tạo lưới */
+        flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+        justify-content: center; /* Tạo khoảng trống giữa các card */
+        column-gap: 2em;
+    }
+
+    .card {
+        /* Fluid Grid: 2 cột với một khoảng trống ở giữa */
+        width: 48%;
+    }
+
+}
+
+/* === BREAKPOINT CHO MÁY TÍNH ĐỂ BÀN === */
+/* NẾU màn hình rộng TỪ 900px TRỞ LÊN, áp dụng các style này */
+@media (min-width: 900px) {
+    .card {
+        /* Fluid Grid: 3 cột */
+        width: 31%;
+    }
+}
+
+/* Others */
+.contact-asta {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hover animations */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.275);
+}
+
+@keyframes floatingAnimation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.card:hover img{
+    animation: floatingAnimation 2s infinite ease-in-out;
+}
+
+.card:active {
+    transform: scale(0.975);
+}
