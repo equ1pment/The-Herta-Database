@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    margin: 0;
 }
 
 .kurukuru {
@@ -55,6 +56,8 @@ body {
     background: linear-gradient(30deg,rgba(122, 86, 174, 1) 0%, rgba(81, 71, 136, 1) 40%, rgba(132, 85, 250, 1) 70%, rgba(89, 66, 137, 1) 100%);
     color: white;
     text-align: center;
+    font-size: clamp(0.75rem, 3.5vw, 1.5rem);
+    letter-spacing: 16px;
     padding: 1em 0;
 }
 
@@ -64,11 +67,6 @@ body {
     color: white;
     text-align: center;
     padding: 2em 0;
-}
-
-.site-header {
-    font-size: 24px;
-    letter-spacing: 24px;
 }
 
 /* Đây là Flexible Image! */
